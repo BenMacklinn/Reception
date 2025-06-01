@@ -1,0 +1,24 @@
+{
+  "name": "aireceptionist",
+  "version": "1.0.0",
+  "main": "fetchCustomers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenMacklinn/AIReceptionist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenMacklinn/AIReceptionist/issues"
+  },
+  "homepage": "https://github.com/BenMacklinn/AIReceptionist#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "description": ""
+}

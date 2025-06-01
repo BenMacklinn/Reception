@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Reception Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css' rel='stylesheet' />
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .dashboard {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e6d6fa 60%, #7B2FF2 100%);
+        }
+        .back-btn {
+            background: #e6d6fa;
+            color: #7B2FF2;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .back-btn:hover {
+            background: #d1b3fa;
+        }
+        h2 {
+            color: #7B2FF2;
+        }
+    </style>
+</head>
+<body>
+    <div class="brand-header" style="justify-content:center; margin-top:48px; margin-bottom:12px;">
+        <img src="/assets/wordmark.png" alt="Reception Wordmark" style="height:64px; width:auto; display:block; margin:0 auto;" />
+    </div>
+    <div class="dashboard" style="position:relative; overflow:hidden;">
+        <img src="/assets/arrow-accent.png" alt="Accent Arrow" style="position:absolute; top:18px; left:18px; height:36px; width:auto; opacity:0.13; z-index:1;" />
+        <img src="/assets/arrow-main.png" alt="Main Arrow" style="position:absolute; bottom:-40px; right:-40px; height:180px; width:auto; opacity:0.07; z-index:0;" />
+        <button class="back-btn" onclick="utils.goHome()">&larr; Back</button>
+        <h2>Calendar View</h2>
+        <div id="fullcalendar"></div>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/calendar.js"></script>
+</body>
+</html> 

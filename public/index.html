@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reception - AI-Powered Receptionist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e6d6fa 60%, #7B2FF2 100%);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, rgba(91, 28, 198, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(91, 28, 198, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform-origin: center;
+            animation: waveGrid 8s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes waveGrid {
+            0%, 100% {
+                transform: perspective(1000px) rotateX(0deg) scale(1);
+            }
+            50% {
+                transform: perspective(1000px) rotateX(5deg) scale(1.1);
+            }
+        }
+
+        .contact-support {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .contact-btn {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #7B2FF2;
+            border: 2px solid #7B2FF2;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background: #7B2FF2;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(123, 47, 242, 0.2);
+        }
+
+        .hero {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            margin-top: -150px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-wordmark-img {
+            height: 280px;
+            width: auto;
+            max-width: 90vw;
+            animation: fadeInDown 1.2s ease-out;
+            object-fit: contain;
+        }
+
+        .hero-tagline {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1.2s ease-out;
+            text-align: center;
+        }
+
+        .hero-subheading {
+            font-size: 1.4rem;
+            color: #000000;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
+            animation: fadeInUp 1.4s ease-out;
+            text-align: center;
+        }
+
+        .strong-cta {
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            background: #7B2FF2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-align: center;
+            animation: fadeInUp 1.6s ease-out;
+        }
+
+        .strong-cta:hover {
+            background: #5F1CC6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(123, 47, 242, 0.2);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-tagline {
+                font-size: 2.5rem;
+            }
+            .hero-subheading {
+                font-size: 1.2rem;
+            }
+            .contact-support {
+                top: 10px;
+                left: 10px;
+            }
+            .contact-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            .hero-wordmark-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-background"></div>
+    <div class="contact-support">
+        <a href="mailto:benlewy05@gmail.com" class="contact-btn">Contact Support</a>
+    </div>
+    <section class="hero">
+        <div class="hero-logo">
+            <img src="/assets/wordmark.png" alt="Reception Wordmark" class="hero-wordmark-img" />
+        </div>
+        <div class="hero-tagline">The Future is Calling</div>
+        <div class="hero-subheading">AI-powered reception for modern businesses. Streamline your front desk, impress your visitors, and never miss a call again.</div>
+        <button class="strong-cta">Book a Demo</button>
+    </section>
+</body>
+</html> 
