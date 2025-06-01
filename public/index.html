@@ -12,38 +12,9 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
             background: linear-gradient(135deg, #f5f7fa 0%, #e6d6fa 60%, #7B2FF2 100%);
             font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .grid-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(90deg, rgba(91, 28, 198, 0.1) 1px, transparent 1px),
-                linear-gradient(rgba(91, 28, 198, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            transform-origin: center;
-            animation: waveGrid 8s ease-in-out infinite;
-            z-index: 0;
-        }
-
-        @keyframes waveGrid {
-            0%, 100% {
-                transform: perspective(1000px) rotateX(0deg) scale(1);
-            }
-            50% {
-                transform: perspective(1000px) rotateX(5deg) scale(1.1);
-            }
         }
 
         .contact-support {
@@ -75,7 +46,6 @@
         }
 
         .hero {
-            min-height: 100vh;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -83,9 +53,9 @@
             justify-content: center;
             text-align: center;
             padding: 2rem;
-            margin-top: -150px;
             position: relative;
             z-index: 1;
+            margin-bottom: 48px;
         }
 
         .hero-logo {
@@ -190,7 +160,6 @@
     </style>
 </head>
 <body>
-    <div class="grid-background"></div>
     <div class="contact-support">
         <a href="mailto:benlewy05@gmail.com" class="contact-btn">Contact Support</a>
     </div>
@@ -200,7 +169,84 @@
         </div>
         <div class="hero-tagline">The Future is Calling</div>
         <div class="hero-subheading">AI-powered reception for modern businesses. Streamline your front desk, impress your visitors, and never miss a call again.</div>
-        <button class="strong-cta">Book a Demo</button>
+        <a class="strong-cta" href="https://buy.stripe.com/test_eVq6oH6An4mjgHU5owdjO00" target="_blank" rel="noopener">Book a Demo</a>
     </section>
+    
+    <section class="how-it-works-section">
+        <h2 class="how-it-works-title">How It Works</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Smart Call Handling</h3>
+                <p class="step-description">Our AI receptionist answers calls professionally, understands caller intent, and routes them appropriately.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Automated Scheduling</h3>
+                <p class="step-description">Seamlessly manage appointments and meetings with our intelligent scheduling system.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3 class="step-title">24/7 Availability</h3>
+                <p class="step-description">Never miss a call or visitor with round-the-clock reception services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="marquee-logo-bar">
+        <div class="marquee-logos">
+            <div class="marquee-logo-item">
+                <img src="/n8nlogo.jpg" alt="n8n" height="64" />
+                <span>n8n</span>
+            </div>
+            <div class="marquee-logo-item">
+                <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4" alt="Vapi" height="64" style="background:#fff; border-radius:12px;" />
+                <span>Vapi</span>
+            </div>
+            <div class="marquee-logo-item">
+                <img src="/cursorlogo.jpg" alt="Cursor" height="64" style="background:#fff; border-radius:12px;" />
+                <span>Cursor</span>
+            </div>
+            <div class="marquee-logo-item">
+                <img src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="Supabase" height="64" />
+                <span>Supabase</span>
+            </div>
+            <div class="marquee-logo-item">
+                <img src="/n8nlogo.jpg" alt="n8n" height="64" />
+                <span>n8n</span>
+            </div>
+            <div class="marquee-logo-item">
+                <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4" alt="Vapi" height="64" style="background:#fff; border-radius:12px;" />
+                <span>Vapi</span>
+            </div>
+            <div class="marquee-logo-item">
+                <img src="/cursorlogo.jpg" alt="Cursor" height="64" style="background:#fff; border-radius:12px;" />
+                <span>Cursor</span>
+            </div>
+            <div class="marquee-logo-item">
+                <img src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="Supabase" height="64" />
+                <span>Supabase</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const howItWorksSection = document.querySelector('.how-it-works-section');
+            if (howItWorksSection) {
+                observer.observe(howItWorksSection);
+            }
+        });
+    </script>
 </body>
 </html> 
